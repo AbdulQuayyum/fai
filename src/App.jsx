@@ -4,7 +4,7 @@ import { About, BackToTop, Contact, Hero, Navbar, Projects, Qualification, Servi
 
 const App = () => {
     return (
-        <div className='layout'>
+        <div className='layout grainy'>
             <header>
                 <Navbar />
             </header>

@@ -4,7 +4,20 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito";
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {

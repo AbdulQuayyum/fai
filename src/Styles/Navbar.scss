@@ -1,0 +1,28 @@
+@import "./Styles.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    // max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+    //   justify-content: flex-end;
+      padding: 0 20px;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 24px;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+  }
+}
