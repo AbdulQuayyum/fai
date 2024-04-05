@@ -1,9 +1,61 @@
 import React from 'react'
+import { motion } from "framer-motion";
+import { BsTwitter, BsLinkedin, BsInstagram, BsArrowRight } from "react-icons/bs"
+
+import fai from "../Assets/Images/fai.jpeg"
+import { Transition, SlideIn } from '../Utilities/Transitions';
 
 const Hero = () => {
-    return (
-        <div>Hero</div>
-    )
+  return (
+    <div className="hero">
+      <div className="relative h-full w-full">
+        <div className="flex items-center justify-center flex-col h-full pb-10">
+          <Transition>
+            <img
+              src={fai}
+              width={200}
+              height={200}
+              alt="Faidah Alao"
+              className="rounded-full size-28 object-cover"
+            />
+          </Transition>
+          <div className="py-6 flex items-center flex-col">
+            <h2 className="md:text-7xl text-4xl font-bold overflow-hidden">
+              <SlideIn>Hello! I&apos;m Faidah Alao</SlideIn>
+            </h2>
+            <h1 className="md:text-7xl text-3xl overflow-hidden">
+              <SlideIn>A Project Manager</SlideIn>
+            </h1>
+          </div>
+          <Transition viewport={{ once: true }} className="w-full">
+            <div className="flex flex-row py-2 px-4 gap-x-5 justify-center">
+              <a href="" target="_blank" rel="noreferrer" className="">
+                <BsTwitter />
+              </a>
+              <a href="https://www.linkedin.com/in/faidah-alao-b265a6239" target="_blank" rel="noreferrer" className="">
+                <BsLinkedin />
+              </a>
+              <a href="" target="_blank" rel="noreferrer" className="">
+                <BsInstagram />
+              </a>
+            </div>
+          </Transition>
+          <Transition viewport={{ once: true }}>
+            <a
+              href={"#contact"}
+              className="px-5 py-3 mt-4 rounded-full border border-[#000] flex items-center gap-4 group"
+            >
+              <span>Let&apos;s talk</span>
+              <BsArrowRight
+                size={20}
+                className="group-hover:rotate-90 transition-transform"
+              />
+            </a>
+          </Transition>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Hero

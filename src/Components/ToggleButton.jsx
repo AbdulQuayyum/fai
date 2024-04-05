@@ -32,6 +32,7 @@ const ToggleButton = ({ setOpen }) => {
                         open: { d: "M 3 2.5 L 17 16.346" },
                     }}
                 />
+
             </svg>
         </button>
     );

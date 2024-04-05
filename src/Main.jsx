@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import App from './App.jsx'
 import "./Styles/Index.css"
+import "./Styles/Hero.scss"
 import "./Styles/Navbar.scss"
 import "./Styles/Sidebar.scss"
 import "./Styles/Styles.scss"

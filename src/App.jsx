@@ -9,7 +9,6 @@ const App = () => {
                 <Navbar />
             </header>
             <main>
-                <span>Hi, I am Faidah Alao</span>
                 <Hero />
                 <About />
                 <Skills />
