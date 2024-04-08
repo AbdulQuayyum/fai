@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { About, BackToTop, Contact, Hero, Navbar, Projects, Qualification, Services, Skills } from "./Components/Index"
+import { About, BackToTop, Contact, Footer, Hero, Navbar, Projects, Qualification, Services, Skills } from "./Components/Index"
 
 const App = () => {
     return (
@@ -18,6 +18,7 @@ const App = () => {
                 <Contact />
             </main>
             <footer>
+                <Footer />
                 <BackToTop />
             </footer>
         </div>
