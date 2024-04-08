@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 
 import { fai, fai01, fai02, fai03 } from '../Assets/Index';
-import { TitleText, TypingText } from "./Index"
-
 import { Transition, SlideIn } from '../Utilities/Transitions';
 
 const About = () => {

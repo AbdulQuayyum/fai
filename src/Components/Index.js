@@ -10,7 +10,5 @@ import Services from "./Services";
 import Sidebar from "./Sidebar";
 import Skills from "./Skills";
 import ToggleButton from "./ToggleButton";
-import { TitleText } from "./CustomTexts";
-import { TypingText } from "./CustomTexts";
 
-export { About, BackToTop, Contact, Hero, Links, Navbar, Projects, Qualification, Services, Sidebar, Skills, ToggleButton, TitleText, TypingText }
+export { About, BackToTop, Contact, Hero, Links, Navbar, Projects, Qualification, Services, Sidebar, Skills, ToggleButton }
