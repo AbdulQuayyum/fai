@@ -68,6 +68,11 @@ section {
     width: 100%;
 }
 
+.main-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
 .nav-item,
 .navbar {
     z-index: 10000;
