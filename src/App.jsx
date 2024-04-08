@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { About, BackToTop, Contact, Footer, Hero, Navbar, Projects, Qualification, Services, Skills } from "./Components/Index"
+import { About, BackToTop, Contact, Education, Footer, Hero, Navbar, Projects, Qualification, Services, Skills } from "./Components/Index"
 
 const App = () => {
     return (
@@ -8,13 +8,14 @@ const App = () => {
             <header>
                 <Navbar />
             </header>
-            <main>
+            <main className='flex flex-col gap-y-10'>
                 <Hero />
                 <About />
+                <Education />
                 {/* <Skills /> */}
                 {/* <Services /> */}
                 <Qualification />
-                <Projects />
+                {/* <Projects /> */}
                 <Contact />
             </main>
             <footer>

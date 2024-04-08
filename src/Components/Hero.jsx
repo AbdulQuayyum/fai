@@ -8,27 +8,27 @@ import { Transition, SlideIn } from '../Utilities/Transitions';
 const Hero = () => {
   return (
     <div className="hero">
-      <div className="relative h-full w-full">
-        <div className="flex items-center justify-center flex-col h-full pb-10">
+      <div className="relative w-full h-full">
+        <div className="flex flex-col items-center justify-center h-full">
           <Transition>
             <img
               src={fai}
               width={200}
               height={200}
               alt="Faidah Alao"
-              className="rounded-full size-28 object-cover"
+              className="object-cover rounded-full size-28"
             />
           </Transition>
-          <div className="py-6 flex items-center flex-col">
-            <h2 className="md:text-7xl text-4xl font-bold overflow-hidden">
+          <div className="flex flex-col items-center py-6">
+            <h2 className="overflow-hidden text-4xl font-bold md:text-7xl">
               <SlideIn>Hello! I&apos;m Faidah Alao</SlideIn>
             </h2>
-            <h1 className="md:text-7xl text-3xl overflow-hidden">
+            <h1 className="overflow-hidden text-3xl md:text-7xl">
               <SlideIn>A Project Manager</SlideIn>
             </h1>
           </div>
           <Transition viewport={{ once: true }} className="w-full">
-            <div className="flex flex-row py-2 px-4 gap-x-5 justify-center">
+            <div className="flex flex-row justify-center px-4 py-2 gap-x-5">
               <a href="" target="_blank" rel="noreferrer" className="">
                 <BsTwitter />
               </a>
@@ -48,7 +48,7 @@ const Hero = () => {
               <span>Let&apos;s talk</span>
               <BsArrowRight
                 size={20}
-                className="group-hover:rotate-90 transition-transform"
+                className="transition-transform group-hover:rotate-90"
               />
             </a>
           </Transition>
