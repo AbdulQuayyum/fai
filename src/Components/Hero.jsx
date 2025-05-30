@@ -2,8 +2,9 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Target, Star, Heart, Rocket, Lightbulb, Crown, Diamond, Coffee, Music, Camera, Palette, Globe, Shield, Flame, Trophy, Gift, Compass } from "lucide-react"
 
-import faicoporate from "../Assets/Images/fai.jpg"
 import { Transition, SlideIn } from '../Utilities/Transitions';
+
+import { faicoporate, fai, fai01, fai02, fai03 } from '../Assets/Index';
 
 const Hero = () => {
   const floatingIcons = [
