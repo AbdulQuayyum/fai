@@ -88,24 +88,24 @@ const Skills = () => {
     ]
 
     return (
-        <section id="skills" className="py-20 px-4">
-            <div className="max-w-7xl mx-auto">
+        <section id="skills" className="w-full px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="w-full">
                 <div className='flex flex-col items-center justify-center gap-y-3'>
                     <SlideIn>
                         <span className='text-xl font-bold md:text-3xl' >
                             What are Faidah's Skills?
                         </span>
                     </SlideIn>
-                    <motion.div className='flex flex-col gap-y-4 text-center' initial={{ opacity: 0, x: -100, rotateY: -30 }} animate={{ opacity: 1, x: 0, rotateY: 0 }} transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }} >
-                        <motion.span className='text-md leading-relaxed md:text-lg' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.8 }} whileInView={{ textShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 2px rgba(0,0,0,0.1)", "0 0 0px rgba(0,0,0,0)"] }} viewport={{ once: false }} >
+                    <motion.div className='flex flex-col text-center gap-y-4' initial={{ opacity: 0, x: -100, rotateY: -30 }} animate={{ opacity: 1, x: 0, rotateY: 0 }} transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }} >
+                        <motion.span className='leading-relaxed text-md md:text-lg' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.8 }} whileInView={{ textShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 2px rgba(0,0,0,0.1)", "0 0 0px rgba(0,0,0,0)"] }} viewport={{ once: false }} >
                             A comprehensive skill set spanning strategic marketing, creative content, and team leadership
                         </motion.span>
                     </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 mt-12 lg:grid-cols-3 gap-8 mb-16">
+                <div className="grid gap-8 mt-12 mb-16 md:grid-cols-2 lg:grid-cols-3">
                     {skillCategories.map((category, index) => (
-                        <motion.div key={index} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} whileHover={{ y: -5 }} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6">
+                        <motion.div key={index} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} whileHover={{ y: -5 }} className="p-6 transition-all duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                                     <category.icon className="w-6 h-6 text-white" />
@@ -116,12 +116,12 @@ const Skills = () => {
                             <div className="space-y-4">
                                 {category.skills.map((skill, skillIndex) => (
                                     <div key={skillIndex}>
-                                        <div className="flex justify-between items-center mb-2">
+                                        <div className="flex items-center justify-between mb-2">
                                             <span className="text-sm font-medium text-navy">{skill.name}</span>
                                             <span className="text-sm text-navy/60">{skill.level}%</span>
                                         </div>
-                                        <div className="w-full bg-gray-200 rounded-full h-2">
-                                            <motion.div initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} transition={{ duration: 1, delay: index * 0.1 + skillIndex * 0.1 }} viewport={{ once: true }} className="progress-bar h-2 rounded-full" />
+                                        <div className="w-full h-2 bg-gray-200 rounded-full">
+                                            <motion.div initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} transition={{ duration: 1, delay: index * 0.1 + skillIndex * 0.1 }} viewport={{ once: true }} className="h-2 rounded-full progress-bar" />
                                         </div>
                                     </div>
                                 ))}
@@ -130,10 +130,10 @@ const Skills = () => {
                     ))}
                 </div>
                 <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center">
-                    <h3 className="text-2xl font-bold mb-8 text-navy">Tools & Technologies</h3>
+                    <h3 className="mb-8 text-2xl font-bold text-navy">Tools & Technologies</h3>
                     <div className="flex flex-wrap justify-center gap-3">
                         {tools.map((tool, index) => (
-                            <motion.span key={index} initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, delay: index * 0.05 }} viewport={{ once: true }} whileHover={{ scale: 1.05 }} className="px-4 py-2 text-sm bg-gradient-to-r from-terracotta/10 to-dusty-rose/20 text-terracotta hover:from-terracotta/20 hover:to-dusty-rose/30 transition-all duration-200 rounded-full font-medium">
+                            <motion.span key={index} initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, delay: index * 0.05 }} viewport={{ once: true }} whileHover={{ scale: 1.05 }} className="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full bg-gradient-to-r from-terracotta/10 to-dusty-rose/20 text-terracotta hover:from-terracotta/20 hover:to-dusty-rose/30">
                                 {tool}
                             </motion.span>
                         ))}

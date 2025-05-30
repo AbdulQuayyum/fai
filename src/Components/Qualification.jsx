@@ -80,7 +80,7 @@ const Qualification = () => {
     }, [])
 
     return (
-        <section id="qualifications" className="py-20 px-4">
+        <section id="qualifications" className="w-full px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="relative flex flex-col justify-center w-full">
                 <span className="blob absolute top-[20%] left-0 w-1/3 h-5/6 blur-[100px] -z-10" />
                 <div className='flex flex-col items-center justify-center gap-y-3'>
@@ -89,24 +89,24 @@ const Qualification = () => {
                             What is Faidah's Qualification?
                         </span>
                     </SlideIn>
-                    <motion.div className='flex flex-col gap-y-4 text-center' initial={{ opacity: 0, x: -100, rotateY: -30 }} animate={{ opacity: 1, x: 0, rotateY: 0 }} transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }} >
-                        <motion.span className='text-md leading-relaxed md:text-lg' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.8 }} whileInView={{ textShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 2px rgba(0,0,0,0.1)", "0 0 0px rgba(0,0,0,0)"] }} viewport={{ once: false }} >
+                    <motion.div className='flex flex-col text-center gap-y-4' initial={{ opacity: 0, x: -100, rotateY: -30 }} animate={{ opacity: 1, x: 0, rotateY: 0 }} transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }} >
+                        <motion.span className='leading-relaxed text-md md:text-lg' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.8 }} whileInView={{ textShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 2px rgba(0,0,0,0.1)", "0 0 0px rgba(0,0,0,0)"] }} viewport={{ once: false }} >
                             A track record of driving results through strategic marketing initiatives and team leadership
                         </motion.span>
                     </motion.div>
                 </div>
-                <div className='flex justify-center mt-6 w-full'>
-                    <div className='w-full max-w-7xl'>
+                <div className='flex justify-center w-full mt-6'>
+                    <div className='w-full'>
                         {data.map((item, index) => (
-                            <Transition key={item.id} className="px-2 py-4 border-b md:py-8 border-white/10 hover:bg-white/5 md:px-12" onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(null)} >
+                            <Transition key={item.id} className="py-4 border-b md:py-8 border-white/10 hover:bg-white/5" onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(null)} >
                                 <div className="flex-1">
                                     <div className="flex items-center gap-4 mb-2">
-                                        <span className="text-sm font-bold text-terracotta bg-terracotta/10 px-3 py-1 rounded-full">
+                                        <span className="px-3 py-1 text-sm font-bold rounded-full text-terracotta bg-terracotta/10">
                                             {String(index + 1).padStart(2, "0")}
                                         </span>
-                                        <h3 className="text-xl md:text-2xl font-bold text-navy">{item.jobTitle}</h3>
+                                        <h3 className="text-xl font-bold md:text-2xl text-navy">{item.jobTitle}</h3>
                                     </div>
-                                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-600 mb-4">
+                                    <div className="flex flex-col gap-2 mb-4 text-gray-600 md:flex-row md:items-center md:gap-6">
                                         <div className="flex items-center gap-2">
                                             <TrendingUp className="w-4 h-4" />
                                             <span className="font-semibold">{item.companyName}</span>
@@ -124,18 +124,18 @@ const Qualification = () => {
                                     </div>
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {Object.entries(item.metrics).map(([key, value]) => (
-                                            <span key={key} variant="secondary" className="bg-dusty-rose/20 py-1 px-2 rounded-full text-terracotta">
+                                            <span key={key} variant="secondary" className="px-2 py-1 rounded-full bg-dusty-rose/20 text-terracotta">
                                                 {value} {key}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
-                                <motion.div initial={{ height: 0 }} animate={{ height: hover === index ? "100%" : 0 }} transition={{ duration: 0.5 }} className="overflow-hidden flex flex-col items-start justify-start gap-y-3">
+                                <motion.div initial={{ height: 0 }} animate={{ height: hover === index ? "100%" : 0 }} transition={{ duration: 0.5 }} className="flex flex-col items-start justify-start overflow-hidden gap-y-3">
                                     <motion.div className="flex items-center gap-2" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
                                         <Zap className="w-4 h-4 text-terracotta" />
                                         <h4 className="font-semibold text-gray-800">Key Achievements:</h4>
                                     </motion.div>
-                                    <motion.ul className="list-disc list-inside space-y-2" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } } }} initial="hidden" animate="visible">
+                                    <motion.ul className="space-y-2 list-disc list-inside" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } } }} initial="hidden" animate="visible">
                                         {item.achievements.map((point, achievementIndex) => (
                                             <motion.li key={achievementIndex} className="text-foreground/80 max-md:text-sm" variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }} whileHover={{ x: 5, color: "#B8867B", transition: { duration: 0.2 } }} >
                                                 {point}

@@ -214,7 +214,7 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="px-4 py-20">
+        <section id="about" className="w-full px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <motion.div className='relative flex flex-col items-center justify-center w-full overflow-hidden' style={{ y: springY, scale: springScale }}>
                 <div className="absolute inset-0 pointer-events-none">
                     {[...Array(6)].map((_, i) => (
@@ -222,7 +222,7 @@ const About = () => {
                     ))}
                 </div>
 
-                <div className='flex flex-col items-center justify-center w-full max-w-6xl'>
+                <div className='flex flex-col items-center justify-center w-full'>
                     <motion.div className='flex flex-col items-center justify-center gap-y-6' initial={{ opacity: 0, y: -80, scale: 0.7, rotateX: 90 }} animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }} transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94], type: "spring", stiffness: 100 }} >
                         <SlideIn>
                             <motion.div className="relative py-6">
@@ -245,8 +245,8 @@ const About = () => {
                                     </motion.span>
                                 </motion.div>
 
-                                <motion.div className='flex items-center justify-center mt-6' initial={{ opacity: 0, y: 50, scale: 0.8 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.8, delay: 1.2, type: "spring", stiffness: 200 }} >
-                                    <motion.a download="Faidah's Resume" href="/faidah.pdf" className="flex custom-hover items-center bg-transparent text-lg gap-x-3 outlined px-10 md:px-16 font-medium !h-[45px] md:!h-[55px] transition-all duration-500 border-[2px] border-[#000] rounded-full hover:bg-black hover:text-white hover:border-transparent text-[#000] relative overflow-hidden group cursor-pointer" variants={buttonVariants} initial="idle" whileHover="hover" whileTap="tap">
+                                <motion.div className='flex items-center justify-center w-full mt-6 md:w-fit' initial={{ opacity: 0, y: 50, scale: 0.8 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.8, delay: 1.2, type: "spring", stiffness: 200 }} >
+                                    <motion.a download="Faidah's Resume" href="/faidah.pdf" className="flex w-full md:w-fit custom-hover justify-center items-center bg-transparent text-lg gap-x-3 outlined px-10 md:px-16 font-medium !h-[45px] md:!h-[55px] transition-all duration-500 border-[2px] border-[#000] rounded-full hover:bg-black hover:text-white hover:border-transparent text-[#000] relative overflow-hidden group cursor-pointer" variants={buttonVariants} initial="idle" whileHover="hover" whileTap="tap">
                                         <motion.div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-black via-gray-800 to-black group-hover:translate-x-0" transition={{ duration: 0.6, ease: "easeInOut" }} />
 
                                         <motion.div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-full" transition={{ duration: 0.8, delay: 0.2 }} />

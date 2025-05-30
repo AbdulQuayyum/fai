@@ -78,8 +78,8 @@ export default function Contact() {
     const isFormValid = requiredFields.every(field => formData[field]);
 
     return (
-        <section id="contact" className="px-4 py-20">
-            <div className="mx-auto max-w-7xl">
+        <section id="contact" className="w-full px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="w-full">
                 <div className='flex flex-col items-center justify-center pb-6 gap-y-3'>
                     <SlideIn>
                         <span className='text-xl font-bold md:text-3xl' >
