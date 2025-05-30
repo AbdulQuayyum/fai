@@ -9,7 +9,6 @@ const Footer = () => {
             <span className="text-base font-bold text-zinc-700">
                 Developed by   <a href="https://abdul-quayyum.vercel.app/" target="_blank" rel="noopener noreferrer">Abdul-Quayyum Alao</a>
             </span>
-
         </div>
     )
 }

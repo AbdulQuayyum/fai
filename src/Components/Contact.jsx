@@ -22,8 +22,8 @@ export default function Contact() {
         {
             icon: Mail,
             label: "Email",
-            value: "faidah.alao@email.com",
-            href: "mailto:faidah.alao@email.com",
+            value: "alaofaidah@gmail.com",
+            href: "mailto:alaofaidah@gmail.com",
         }, {
             icon: PiWhatsappLogo,
             label: "WhatsApp",
@@ -48,7 +48,7 @@ export default function Contact() {
             `Best regards,\n${formData.firstName} ${formData.lastName}`
         )
 
-        const mailtoUrl = `mailto:faidah.alao@email.com?subject=${subject}&body=${body}`
+        const mailtoUrl = `mailto:alaofaidah@gmail.com?subject=${subject}&body=${body}`
 
         try {
             window.location.href = mailtoUrl
@@ -78,8 +78,8 @@ export default function Contact() {
     const isFormValid = requiredFields.every(field => formData[field]);
 
     return (
-        <section id="contact" className="py-20 px-4">
-            <div className="max-w-7xl mx-auto">
+        <section id="contact" className="px-4 py-20">
+            <div className="mx-auto max-w-7xl">
                 <div className='flex flex-col items-center justify-center pb-6 gap-y-3'>
                     <SlideIn>
                         <span className='text-xl font-bold md:text-3xl' >
@@ -88,9 +88,9 @@ export default function Contact() {
                     </SlideIn>
                 </div>
 
-                <div className="grid lg:grid-cols-2 mt-12 gap-12">
-                    <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="bg-white rounded-lg shadow-lg p-8">
-                        <h3 className="text-2xl font-bold mb-6 text-navy">Send a Message</h3>
+                <div className="grid gap-12 mt-12 lg:grid-cols-2">
+                    <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="p-8 bg-white rounded-lg shadow-lg">
+                        <h3 className="mb-6 text-2xl font-bold text-navy">Send a Message</h3>
                         {submitStatus === 'success' && (
                             <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3 animate-[slideInUp_0.5s_ease-out]">
                                 <CheckCircle className="w-5 h-5 text-green-600" />
@@ -106,34 +106,34 @@ export default function Contact() {
                         )}
 
                         <form className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-4">
+                            <div className="grid gap-4 md:grid-cols-2">
                                 <div>
-                                    <label className="block text-sm font-medium text-navy mb-2">First Name</label>
+                                    <label className="block mb-2 text-sm font-medium text-navy">First Name</label>
                                     <input type="text" placeholder="Your first name" name="firstName" value={formData.firstName} onChange={handleInputChange} required={true} className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent" />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-navy mb-2">Last Name</label>
+                                    <label className="block mb-2 text-sm font-medium text-navy">Last Name</label>
                                     <input type="text" placeholder="Your last name" name="lastName" value={formData.lastName} onChange={handleInputChange} required={true} className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent" />
                                 </div>
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-navy mb-2">Email</label>
+                                <label className="block mb-2 text-sm font-medium text-navy">Email</label>
                                 <input type="email" placeholder="your.email@example.com" name="email" value={formData.email} onChange={handleInputChange} required={true} className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent" />
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-navy mb-2">Subject</label>
+                                <label className="block mb-2 text-sm font-medium text-navy">Subject</label>
                                 <input type="text" placeholder="What's this about?" name="subject" value={formData.subject} onChange={handleInputChange} required={true} className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent" />
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-navy mb-2">Message</label>
-                                <textarea placeholder="Tell me about your project or how I can help..." rows={6} name="message" value={formData.message} onChange={handleInputChange} required={true} className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent resize-none" />
+                                <label className="block mb-2 text-sm font-medium text-navy">Message</label>
+                                <textarea placeholder="Tell me about your project or how I can help..." rows={6} name="message" value={formData.message} onChange={handleInputChange} required={true} className="w-full px-3 py-2 border border-gray-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent" />
                             </div>
                             <button onClick={handleSubmit} disabled={isSubmitting || !isFormValid} type="submit" className={`w-full bg-gradient-primary hover:bg-terracotta text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2  ${isSubmitting || !isFormValid ? 'opacity-75 cursor-not-allowed' : ''}`}>
                                 {isSubmitting ? (
                                     <>
-                                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                                        <div className="w-5 h-5 border-b-2 border-white rounded-full animate-spin"></div>
                                         Sending...
                                     </>
                                 ) : (
@@ -150,8 +150,8 @@ export default function Contact() {
                     </motion.div>
                     <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="space-y-8">
                         <div>
-                            <h3 className="text-2xl font-bold mb-6 text-navy">Get in Touch</h3>
-                            <p className="text-navy/70 leading-relaxed mb-8">
+                            <h3 className="mb-6 text-2xl font-bold text-navy">Get in Touch</h3>
+                            <p className="mb-8 leading-relaxed text-navy/70">
                                 I'm always excited to discuss new opportunities and creative challenges. Whether you're looking to boost
                                 your brand's engagement, develop a comprehensive marketing strategy, or need help with campaign
                                 execution, I'd love to hear from you.
@@ -160,15 +160,15 @@ export default function Contact() {
 
                         <div className="space-y-4">
                             {contactInfo.map((info, index) => (
-                                <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6">
+                                <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="p-6 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
                                     <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-xl">
+                                        <div className="flex items-center justify-center w-12 h-12 text-xl rounded-full bg-gradient-primary">
                                             <info.icon className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
                                             <p className="text-sm text-navy/70">{info.label}</p>
                                             {info.href ? (
-                                                <a href={info.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-terracotta hover:text-terracotta/80 transition-colors">
+                                                <a href={info.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold transition-colors text-terracotta hover:text-terracotta/80">
                                                     {info.value}
                                                 </a>
                                             ) : (
@@ -179,13 +179,13 @@ export default function Contact() {
                                 </motion.div>
                             ))}
                         </div>
-                        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} viewport={{ once: true }} className="bg-gradient-primary text-white rounded-lg shadow-lg p-6 text-center">
+                        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} viewport={{ once: true }} className="p-6 text-center text-white rounded-lg shadow-lg bg-gradient-primary">
                             <MessageCircle className="w-12 h-12 mx-auto mb-4" />
-                            <h4 className="text-xl font-bold mb-2">Ready to Start?</h4>
+                            <h4 className="mb-2 text-xl font-bold">Ready to Start?</h4>
                             <p className="mb-4 opacity-90">
                                 Let's discuss your next marketing campaign and create something extraordinary together.
                             </p>
-                            <a href="https://www.linkedin.com/in/faidah-alao-b265a6239" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-terracotta hover:bg-cream px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+                            <a href="https://www.linkedin.com/in/faidah-alao-b265a6239" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 font-semibold transition-colors duration-300 bg-white rounded-lg text-terracotta hover:bg-cream">
                                 Connect on LinkedIn
                             </a>
                         </motion.div>
