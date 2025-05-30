@@ -8,14 +8,14 @@ const App = () => {
             <header>
                 <Navbar />
             </header>
-            <main className='flex flex-col gap-y-10'>
+            <main className='flex flex-col gap-y-10 overflow-hidden'>
                 <Hero />
                 <About />
-                <Education />
-                {/* <Skills /> */}
                 {/* <Services /> */}
                 <Qualification />
-                {/* <Projects /> */}
+                <Skills />
+                <Projects />
+                <Education />
                 <Contact />
             </main>
             <footer>
